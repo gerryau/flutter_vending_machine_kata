@@ -11,7 +11,7 @@ https://github.com/guyroyse/vending-machine-kata
 
 TDD:
 * accept coins
-  * accept valid coins (5p, 10p, 20p and 50p) and reject invalid ones (pennies)
+  * accept valid coins (10c, 20c and 50c) and reject invalid ones (5c)
   * when a valid coin is inserted the amount of the coin will be added to the current amount and the display will be updated
   * when there are no coins inserted, the machine displays "INSERT COIN"
   * rejected coins are placed in the coin return
