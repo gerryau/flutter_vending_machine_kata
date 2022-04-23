@@ -1,0 +1,28 @@
+name: flutter_vending_machine_kata
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # ADDED
+  freezed_annotation: ^2.0.1
+  freezed: ^2.0.2
+  adaptive_dialog: ^1.5.0+1
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
