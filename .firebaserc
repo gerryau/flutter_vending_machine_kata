@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "early_testing": "sample-flutter-data-model",
+    "default": "sample-flutter-data-model"
+  },
+  "targets": {}
+}

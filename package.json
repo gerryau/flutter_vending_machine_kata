@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^6.2.0"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^2.19.0",
+    "nvm": "^0.0.4"
+  }
+}
