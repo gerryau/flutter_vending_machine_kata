@@ -18,10 +18,13 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  state.coinBalance == 0
-                      ? "Insert Coin"
+                  state.coinBalance == 0 && state.coinReturn == 0
+                      ? "INSERT COIN"
                       : "Coin Balance: ${state.coinBalance}",
                 ),
+                Text(state.coinReturn == 0 && state.coinBalance == 0
+                    ? ""
+                    : "Coin Return: ${state.coinReturn}"),
                 ElevatedButton(
                   onPressed: () {
                     context.read<VendingMachineCubit>().insertCoin(50);
