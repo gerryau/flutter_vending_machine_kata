@@ -12,8 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   # ADDED
-  freezed_annotation: ^2.0.1
-  freezed: ^2.0.2
+  freezed_annotation: ^1.1.0
   adaptive_dialog: ^1.5.0+1
 
   cupertino_icons: ^1.0.2
@@ -22,10 +21,14 @@ dependencies:
 
 dev_dependencies:
 
+  freezed: ^1.1.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
-  build_runner: ^2.1.10
+  build_runner: ^2.1.8
+
+  bloc_test: ^9.0.3
+  mocktail: ^0.3.0
 
 flutter:
 

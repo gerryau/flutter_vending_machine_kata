@@ -13,4 +13,14 @@ void main() {
       expect(vendingMachine.insertCoin(5), 80);
     },
   );
+
+  test(
+    'If a coin is rejected, it is aded to the total returned change',
+    () {
+      final vendingMachine = VendingMachine();
+
+      expect(vendingMachine.insertCoin(5), 0); //checking it doesn't work
+      expect(vendingMachine.coinReturn, 5);
+    },
+  );
 }

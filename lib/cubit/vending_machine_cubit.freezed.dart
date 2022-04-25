@@ -17,19 +17,20 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$VendingMachineState {
   int get coinBalance => throw _privateConstructorUsedError;
+  int get coinReturn => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int coinBalance) initial,
+    required TResult Function(int coinBalance, int coinReturn) initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int coinBalance)? initial,
+    TResult Function(int coinBalance, int coinReturn)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int coinBalance)? initial,
+    TResult Function(int coinBalance, int coinReturn)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,7 +61,7 @@ abstract class $VendingMachineStateCopyWith<$Res> {
   factory $VendingMachineStateCopyWith(
           VendingMachineState value, $Res Function(VendingMachineState) then) =
       _$VendingMachineStateCopyWithImpl<$Res>;
-  $Res call({int coinBalance});
+  $Res call({int coinBalance, int coinReturn});
 }
 
 /// @nodoc
@@ -75,11 +76,16 @@ class _$VendingMachineStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? coinBalance = freezed,
+    Object? coinReturn = freezed,
   }) {
     return _then(_value.copyWith(
       coinBalance: coinBalance == freezed
           ? _value.coinBalance
           : coinBalance // ignore: cast_nullable_to_non_nullable
+              as int,
+      coinReturn: coinReturn == freezed
+          ? _value.coinReturn
+          : coinReturn // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -91,7 +97,7 @@ abstract class _$InitialCopyWith<$Res>
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
   @override
-  $Res call({int coinBalance});
+  $Res call({int coinBalance, int coinReturn});
 }
 
 /// @nodoc
@@ -107,11 +113,16 @@ class __$InitialCopyWithImpl<$Res>
   @override
   $Res call({
     Object? coinBalance = freezed,
+    Object? coinReturn = freezed,
   }) {
     return _then(_Initial(
       coinBalance: coinBalance == freezed
           ? _value.coinBalance
           : coinBalance // ignore: cast_nullable_to_non_nullable
+              as int,
+      coinReturn: coinReturn == freezed
+          ? _value.coinReturn
+          : coinReturn // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -120,14 +131,16 @@ class __$InitialCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Initial implements _Initial {
-  const _$_Initial({required this.coinBalance});
+  const _$_Initial({required this.coinBalance, required this.coinReturn});
 
   @override
   final int coinBalance;
+  @override
+  final int coinReturn;
 
   @override
   String toString() {
-    return 'VendingMachineState.initial(coinBalance: $coinBalance)';
+    return 'VendingMachineState.initial(coinBalance: $coinBalance, coinReturn: $coinReturn)';
   }
 
   @override
@@ -136,12 +149,16 @@ class _$_Initial implements _Initial {
         (other.runtimeType == runtimeType &&
             other is _Initial &&
             const DeepCollectionEquality()
-                .equals(other.coinBalance, coinBalance));
+                .equals(other.coinBalance, coinBalance) &&
+            const DeepCollectionEquality()
+                .equals(other.coinReturn, coinReturn));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(coinBalance));
+      runtimeType,
+      const DeepCollectionEquality().hash(coinBalance),
+      const DeepCollectionEquality().hash(coinReturn));
 
   @JsonKey(ignore: true)
   @override
@@ -151,27 +168,27 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int coinBalance) initial,
+    required TResult Function(int coinBalance, int coinReturn) initial,
   }) {
-    return initial(coinBalance);
+    return initial(coinBalance, coinReturn);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int coinBalance)? initial,
+    TResult Function(int coinBalance, int coinReturn)? initial,
   }) {
-    return initial?.call(coinBalance);
+    return initial?.call(coinBalance, coinReturn);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int coinBalance)? initial,
+    TResult Function(int coinBalance, int coinReturn)? initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(coinBalance);
+      return initial(coinBalance, coinReturn);
     }
     return orElse();
   }
@@ -206,10 +223,14 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements VendingMachineState {
-  const factory _Initial({required final int coinBalance}) = _$_Initial;
+  const factory _Initial(
+      {required final int coinBalance,
+      required final int coinReturn}) = _$_Initial;
 
   @override
   int get coinBalance => throw _privateConstructorUsedError;
+  @override
+  int get coinReturn => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialCopyWith<_Initial> get copyWith =>
